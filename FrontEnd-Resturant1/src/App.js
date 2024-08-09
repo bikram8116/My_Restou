@@ -6,6 +6,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Menu from "./pages/Menu";
 import Pagenotfound from "./pages/Pagenotfound";
+import PrivateRoute from "./pages/PrivateRoute";
+
 function App() {
   return (
     <div>
@@ -14,9 +16,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/menu" element={<Menu />} />
+          
+          {/* Protected routes */}
+          <Route path="/about" element={<PrivateRoute><About /></PrivateRoute>} />
+          <Route path="/contact" element={<PrivateRoute><Contact /></PrivateRoute>} />
+          <Route path="/menu" element={<PrivateRoute><Menu /></PrivateRoute>} />
+
           <Route path="*" element={<Pagenotfound />} />
         </Routes>
       </BrowserRouter>

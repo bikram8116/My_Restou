@@ -29,11 +29,12 @@ const SignIn = () => {
             });
 
             if (response.status === 200) {
-                // Store the token or any relevant data in localStorage or context
-                const token = response.data.Token;
+                const token = response.data.token;
                 localStorage.setItem('authToken', token);
 
-                console.log("Sign in successful", form);
+                console.log("Sign in successful form :-", form);
+                console.log("Sign in successful token :-", token);
+                console.log("Sign in successful response :-", response);
                 navigate('/');
             } else {
                 setError("Invalid email or password.");
