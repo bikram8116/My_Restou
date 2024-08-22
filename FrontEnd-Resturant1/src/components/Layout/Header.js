@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Box,
@@ -7,19 +7,48 @@ import {
   IconButton,
   Toolbar,
   Typography,
+  Menu,
+  MenuItem,
+  Avatar,
 } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Logo from "../../images/logo.svg";
-
 import MenuIcon from "@mui/icons-material/Menu";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../../styles/HeaderStyles.css";
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  // hndle menu click
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [initial, setInitial] = useState('');
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem('firstName');
+    if (storedUsername) {
+      setInitial(storedUsername.charAt(0).toUpperCase());
+    }
+  }, []);
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  //menu drawer
+
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('firstName');
+    navigate('/signin');
+  };
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography
@@ -46,9 +75,29 @@ const Header = () => {
         <li>
           <NavLink to={"/contact"}>Contact</NavLink>
         </li>
+        <li>
+          <ShoppingCartIcon sx={{ color: "black", cursor: "pointer", fontSize: "1.8rem" }} />
+        </li>
+        {initial && (
+          <li>
+            <Avatar
+              sx={{
+                bgcolor: "goldenrod",
+                cursor: "pointer",
+                width: 40,
+                height: 40,
+                fontSize: "1.2rem",
+              }}
+              onClick={handleMenuClick}
+            >
+              {initial}
+            </Avatar>
+          </li>
+        )}
       </ul>
     </Box>
   );
+
   return (
     <>
       <Box>
@@ -90,6 +139,32 @@ const Header = () => {
                 <li>
                   <NavLink to={"/contact"}>Contact</NavLink>
                 </li>
+                <li>
+                  <ShoppingCartIcon sx={{ color: "white", cursor: "pointer", fontSize: "1.8rem" }} />
+                </li>
+                {initial && (
+                  <li>
+                    <Avatar
+                      sx={{
+                        bgcolor: "goldenrod",
+                        cursor: "pointer",
+                        width: 40,
+                        height: 40,
+                        fontSize: "1.2rem",
+                      }}
+                      onClick={handleMenuClick}
+                    >
+                      {initial}
+                    </Avatar>
+                    <Menu
+                      anchorEl={anchorEl}
+                      open={Boolean(anchorEl)}
+                      onClose={handleMenuClose}
+                    >
+                      <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                    </Menu>
+                  </li>
+                )}
               </ul>
             </Box>
           </Toolbar>

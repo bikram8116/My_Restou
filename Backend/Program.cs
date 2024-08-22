@@ -90,8 +90,14 @@ app.MapPost("/login", async (UserDbContext db, User loginRequest) =>
     var token = tokenHandler.CreateToken(tokenDescriptor);
     var tokenString = tokenHandler.WriteToken(token);
 
-    return Results.Ok(new { Token = tokenString });
+    // Include the user's FirstName in the response
+    return Results.Ok(new 
+    { 
+        Token = tokenString, 
+        FirstName = user.FirstName 
+    });
 });
+
 
 app.MapGet("/users", async (UserDbContext db) => await db.Users.ToListAsync());
 app.MapGet("/users/{id}", async (UserDbContext db, int id) =>

@@ -23,17 +23,22 @@ const SignIn = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5020/login', {
-                Email: form.email,
-                Password: form.password,
-            });
+            const response = await axios.post('http://localhost:5020/login',
+                // const response = await axios.post('http://3.128.64.253:5020/login',
+                {
+                    Email: form.email,
+                    Password: form.password,
+                });
 
             if (response.status === 200) {
                 const token = response.data.token;
+                const FirstName = response.data.firstName;
                 localStorage.setItem('authToken', token);
+                localStorage.setItem('firstName', FirstName); 
 
                 console.log("Sign in successful form :-", form);
                 console.log("Sign in successful token :-", token);
+                console.log("Sign in successful FirstName :-", FirstName);
                 console.log("Sign in successful response :-", response);
                 navigate('/');
             } else {

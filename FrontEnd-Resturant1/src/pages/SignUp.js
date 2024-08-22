@@ -11,7 +11,7 @@ const SignUp = () => {
         password: '',
         confirmPassword: ''
     });
-    
+
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
@@ -53,12 +53,14 @@ const SignUp = () => {
             // Clear errors if the form is valid
             setErrors({});
             try {
-                const response = await axios.post('http://localhost:5020/signup', {
-                    FirstName: form.firstName,
-                    LastName: form.lastName,
-                    Email: form.email,
-                    Password: form.password,
-                });
+                // const response = await axios.post('http://3.128.64.253:5020/signup',
+                    const response = await axios.post('http://localhost:5020/signup',
+                    {
+                        FirstName: form.firstName,
+                        LastName: form.lastName,
+                        Email: form.email,
+                        Password: form.password,
+                    });
 
                 if (response.status === 201) {
                     console.log("User registered successfully");

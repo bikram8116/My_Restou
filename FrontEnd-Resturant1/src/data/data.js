@@ -23,125 +23,125 @@ export const MenuList = [
     description:
       "A dosa is a thin savory crepe in South Indian cuisine made from a fermented batter of ground black lentils and rice. ",
     image: Dosa,
-    price: 200,
+    price: 75,
   },
   {
     name: "Chole Bhature",
     description:
       "Chole Bhature also known as Chana Bhatura is one of the most popular Punjabi dish liked almost all over India. ",
     image: Chola,
-    price: 250,
+    price: 80,
   },
   {
     name: "Idli Sambhar",
     description:
       "Idli Sambar is a South Indian breakfast meal where soft fluffy steamed cakes known as idli are served with sambar, a vegetable lentil stew.",
     image: Idli,
-    price: 300,
+    price: 60,
   },
   {
     name: "Masala Dosa",
     description:
       "They are good sources of fibre, vitamins and minerals. It is essential to note that the nutritional value of masala dosa can vary depending on the ingredients used and the cooking method.",
     image: MasalaDosa,
-    price: 100,
+    price: 80,
   },
   {
     name: "Paneer",
     description:
       "Paneer tikka is an appetizer of grilled paneer skewers whereas paneer tikka masala is a curried dish of grilled paneer in a spicy tikka masala gravy.",
     image: Paneer,
-    price: 400,
+    price: 130,
   },
   {
     name: "Gujrati",
     description:
       "Prepare a flavourful Gujarati Thali at home complete with authentic and traditional Gujarati recipes.",
     image: Gujrati,
-    price: 500,
+    price: 160,
   },
   {
     name: "Mutton Thali",
     description:
       "Indulge in the rich and flavorful journey of our Mutton Thali, a feast for the senses. Savor succulent mutton cooked to perfection, accompanied by an array of aromatic spices that tantalize your taste buds.",
     image: Mutton,
-    price: 500,
+    price: 320,
   },
   {
     name: "Fish Thali",
     description:
       "Dive into a maritime symphony with our delectable Fish Thali, a celebration of coastal flavors. Delight in the catch of the day, expertly prepared with a medley of spices that elevate the taste of every bite.",
     image: Fish,
-    price: 500,
+    price: 240,
   },
   {
     name: "Panner Biryani",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Paneer Biryani is a super satisfying vegetarian meal with aromatic fluffy basmati rice, and pillowy soft chunks of flavorful paneer marinated in warming spices.",
     image: Biryani,
-    price: 500,
+    price: 150,
   },
   {
     name: "Chowmin",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Hakka noodles is a very popular street food dish in Delhi and across India. It's cheap, quick to prepare and easily available both at street vendors stalls and in restaurants.",
     image: Chowmin,
-    price: 500,
+    price: 100,
   },
   {
     name: "Momo",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Momos are a type of steamed filled dumpling in Tibetan and Nepali cuisine that is also popular in neighbouring Bhutan and India.  ",
     image: Momo,
-    price: 500,
+    price: 120,
   },
   {
     name: "Chicken Curry",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Heat olive oil in a skillet over medium heat. Sauté onion until lightly browned ",
     image: Chicken,
-    price: 500,
+    price: 140,
   },
   {
     name: "Chicken Mughlai",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "My version of the beautiful Indian curry chicken dish blends lots of freshly toasted ground spices (for ease), three bold aromatics. ",
     image: Mughlai,
-    price: 500,
+    price: 140,
   },
   {
     name: "Chicken Lolipop",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Chicken lollipop is a chicken drumstick that has been Frenched ",
     image: Lolipop,
-    price: 500,
+    price: 120,
   },
   {
     name: "Chicken 65",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Chicken 65 is a South Indian deep fried chicken appetizer, originated in Hotel Buhari in Chennai. ",
     image: SixtyFive,
-    price: 500,
-  }, 
+    price: 160,
+  },
   {
     name: "Butter Chicken",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Usually, it includes butter, cream, and cashew paste as a thickener. The tangy tomatoes, smokey Kasuri methi, and yogurt will give a special and attractive taste to the gravy.",
     image: ButterChicken,
-    price: 500,
-  }, 
+    price: 140,
+  },
   {
     name: "Chicken Handi",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Chicken handi is a traditional Indian dish made with tender pieces of chicken cooked in a rich and creamy tomato-based gravy, flavored with aromatic spices.",
     image: ChickenHandi,
-    price: 500,
-  }, 
+    price: 120,
+  },
   {
     name: "Chicken Tandoor",
     description:
-      "Elevate your dining experience with our Paneer Biryani, a vegetarian delight that fuses fragrant basmati rice with succulent cubes of paneer. ",
+      "Tandoori chicken, a dish of roasted chicken marinated in yogurt and generously spiced, giving the meat its trademark red colour. ",
     image: ChickenTandoor,
-    price: 500,
-  }, 
+    price: 120,
+  },
 ];
